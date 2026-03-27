@@ -529,7 +529,7 @@ html[data-theme="dark"] .coverCard__restore:hover {
   line-height: 1.34;
 }
  .footerNote__link { color: var(--accent-deep); }
- .footerNote__linkMuted { color: inherit; text-decoration: none; }
+ .footerNote__linkMuted { color: var(--muted); text-decoration: none; }
  .footerNote__linkMuted:hover { color: var(--accent); }
 
 .filterPanel__footer .ghostButton { color: var(--red); border-color: rgba(183,79,66,.38); padding: 4px 7px; font-size: .68rem; border-radius: 3px; }
