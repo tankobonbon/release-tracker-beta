@@ -141,7 +141,9 @@ export default function AppShell({
             <footer className="footerNote">
               <span>Images are subject to copyright.</span>
               <span>
-                This site is a <a href="https://tankobonbon.com" target="_blank" rel="noopener noreferrer" className="footerNote__link">Tankobonbon</a> extension.
+                This site is a <a href="https://tankobonbon.com" target="_blank" rel="noopener noreferrer" className="footerNote__link">Tankobonbon</a> extension 
+                  <span style={{ opacity: 0.5 }}>•</span> 
+                <a href="https://github.com/tankobonbon/release-tracker-beta" target="_blank" rel="noopener noreferrer" className="footerNote__link">GitHub ↗</a>
               </span>
             </footer>
           </section>
