@@ -26,3 +26,6 @@ This is a beta release to materialize the idea I have in mind. There are plenty 
 - Toggleable dark mode
 - Scrollable titles in case it's very long (as recent light novels do)
 - Search and filtering across books
+
+## Limiting API calls
+- To avoid hitting high API calls, book info caches every hour while collection/series list every 24 hours
