@@ -142,7 +142,7 @@ export default function AppShell({
               <span>Images are subject to copyright.</span>
               <span>
                 This site is a <a href="https://tankobonbon.com" target="_blank" rel="noopener noreferrer" className="footerNote__link">Tankobonbon</a> extension 
-                  <span style={{ opacity: 0.5 }}>•</span> 
+                  <span style={{ opacity: 0.5 }}>{"\u2003"}•{"\u2003"}</span> 
                 <a href="https://github.com/tankobonbon/release-tracker-beta" target="_blank" rel="noopener noreferrer" className="footerNote__link">GitHub ↗</a>
               </span>
             </footer>
