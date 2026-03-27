@@ -2,7 +2,7 @@
 
 A tracker for manga releases that acts as an extension for Tankobonbon's database.
 
-## Link: tracker.tankobonbon.com
+## [Open the Release Tracker](https://tracker.tankobonbon.com)
 
 ## Notes
 This is a beta release to materialize the idea I have in mind. There are plenty of books not yet added to the site and series that are not yet configured for this tracker so it's still unfinished, but already usable.
