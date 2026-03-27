@@ -71,7 +71,7 @@ button, a, .coverCard__link { -webkit-tap-highlight-color: transparent; }
   background: linear-gradient(180deg, var(--bg-soft), var(--bg));
   isolation: isolate;
 }
-.topNavBar { display: none; border-radius: 0; }
+.topNavBar { display: none; border-radius: 0 !important; }
 .followShelf__shell {
   width: min(1280px, 100%);
   margin: 0 auto;
