@@ -529,8 +529,8 @@ html[data-theme="dark"] .coverCard__restore:hover {
   line-height: 1.34;
 }
  .footerNote__link { color: var(--accent-deep); }
- .footerNote__linkMuted a { color: var(--muted); text-decoration: none; }
- .footerNote__linkMuted a:hover { color: var(--accent); }
+ .footerNote__linkMuted { color: var(--muted) !important; text-decoration: none; }
+ .footerNote__linkMuted:hover { color: var(--accent) !important; }
 
 .filterPanel__footer .ghostButton { color: var(--red); border-color: rgba(183,79,66,.38); padding: 4px 7px; font-size: .68rem; border-radius: 3px; }
 .filterPanel__footer .ghostButton:hover { color: #fff; background: rgba(183,79,66,.92); border-color: rgba(183,79,66,.82); box-shadow: inset 0 -1px 0 rgba(110, 25, 15, .32); }
