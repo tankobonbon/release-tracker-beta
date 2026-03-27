@@ -10,7 +10,11 @@ function getEndpoint() {
   return `https://${SHOPIFY_DOMAIN}/api/2024-01/graphql.json`;
 }
 
-export async function shopifyFetch({ query, variables = {} }) {
+export async function shopifyFetch({
+  query,
+  variables = {},
+  revalidate = 3600, // default = 1 hour
+}) {
   const response = await fetch(getEndpoint(), {
     method: "POST",
     headers: {
@@ -18,7 +22,7 @@ export async function shopifyFetch({ query, variables = {} }) {
       "X-Shopify-Storefront-Access-Token": STOREFRONT_TOKEN,
     },
     body: JSON.stringify({ query, variables }),
-    cache: "no-store",
+    next: { revalidate },
   });
 
   const json = await response.json();
@@ -53,7 +57,12 @@ export async function getCollections() {
   let cursor = null;
 
   while (hasNext) {
-    const data = await shopifyFetch({ query, variables: { after: cursor } });
+    const data = await shopifyFetch({
+      query,
+      variables: { after: cursor },
+      revalidate: 86400, // 24 hours
+    });
+
     const collections = data?.collections;
     if (!collections) break;
 
@@ -103,7 +112,12 @@ export async function getRecentProductsForCollections(handles = [], days = 90) {
 
   for (const handle of handles) {
     try {
-      const data = await shopifyFetch({ query, variables: { handle } });
+      const data = await shopifyFetch({
+        query,
+        variables: { handle },
+        // uses default revalidate = 3600 (1 hour)
+      });
+
       const collection = data?.collection;
       if (!collection) continue;
 
